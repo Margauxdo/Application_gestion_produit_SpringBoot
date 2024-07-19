@@ -30,11 +30,11 @@ public class ProductController {
         model.addAttribute("productList", productList);
         return "list";
     }
-    @GetMapping("/detail/{productId}")
-    public String detail(@PathVariable ("productId") UUID productId, Model model){
+    @GetMapping("/detail/{id}")
+    public String detail(@PathVariable ("id") UUID productId, Model model){
         Product product = productService.getProductById(productId);
         model.addAttribute("product", product);
-        return "detail";git
+        return "detail";
     }
 
 
