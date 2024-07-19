@@ -13,18 +13,22 @@ public class ProductService {
         products = new HashMap<>();
 
         Product product1 = Product.builder()
+                .id(UUID.randomUUID())
                 .name("Product 1")
                 .category("Category1.")
                 .build();
         Product product2 = Product.builder()
+                .id(UUID.randomUUID())
                 .name("Product 2")
                 .category("Category 2 is ....")
                 .build();
         Product product3 = Product.builder()
+                .id(UUID.randomUUID())
                 .name("Product 3")
                 .category("Category 3 is ....")
                 .build();
         Product product4 = Product.builder()
+                .id(UUID.randomUUID())
                 .name("Product 4")
                 .category("Category 4 is ....")
                 .build();
