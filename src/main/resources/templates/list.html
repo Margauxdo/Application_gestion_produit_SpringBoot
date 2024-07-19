@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ProductList</title>
+    <span th:replace="~{home::bootstrapAndCssImports}"></span>
+</head>
+<body>
+<h1>Liste des produits</h1>
+<nav>
+<a th:href="@{/}">Acceuil</a>
+</nav>
+<div>
+    <ul th:if="${!productList.isEmpty()}">
+        <li  th:each="p : ${productList}" >
+            <span th:text="${p}"></span>
+            <button>
+
+            <a></a>
+            </button>
+        </li>
+    </ul>
+    <p th:unless="${!productList.isEmpty()}"></p>
+</div>
+
+</body>
+</html>
