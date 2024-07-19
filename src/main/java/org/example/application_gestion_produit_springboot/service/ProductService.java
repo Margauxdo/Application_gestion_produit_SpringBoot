@@ -15,7 +15,7 @@ public class ProductService {
         Product product1 = Product.builder()
                 .id(UUID.randomUUID())
                 .name("americain")
-                .category("Food")
+                .category("food")
                 .price(8)
                 .build();
         Product product2 = Product.builder()
