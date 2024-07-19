@@ -38,8 +38,11 @@ public class ProductController {
         return "detail";
     }
 
-    @GetMapping("/detail/search")
-    public String searchProduct(@RequestParam("productCategory")String category, @RequestParam("productPrice") int price, Model model){
+    @GetMapping("/filter")
+    public String searchProduct(
+            @RequestParam(value="category",required = false) String category,
+            @RequestParam(value="maxPrice", required= false, defaultValue = "100000") Integer price,
+            Model model){
         List<Product> products = productService.getProductByCategoryOrPrice(category, price);
         model.addAttribute("productList", products);
         return "list";

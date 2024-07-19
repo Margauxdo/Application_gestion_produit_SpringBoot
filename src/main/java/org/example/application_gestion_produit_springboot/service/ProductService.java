@@ -14,23 +14,27 @@ public class ProductService {
 
         Product product1 = Product.builder()
                 .id(UUID.randomUUID())
-                .name("Product 1")
-                .category("Category1.")
+                .name("americain")
+                .category("Food")
+                .price(8)
                 .build();
         Product product2 = Product.builder()
                 .id(UUID.randomUUID())
-                .name("Product 2")
-                .category("Category 2 is ....")
+                .name("créme solaire")
+                .category("beauté")
+                .price(10)
                 .build();
         Product product3 = Product.builder()
                 .id(UUID.randomUUID())
-                .name("Product 3")
-                .category("Category 3 is ....")
+                .name("kebab")
+                .category("fastfood")
+                .price(7)
                 .build();
         Product product4 = Product.builder()
                 .id(UUID.randomUUID())
-                .name("Product 4")
-                .category("Category 4 is ....")
+                .name("chapeau")
+                .category("textile")
+                .price(5)
                 .build();
         products.put(product1.getId(), product1);
         products.put(product2.getId(), product2);
