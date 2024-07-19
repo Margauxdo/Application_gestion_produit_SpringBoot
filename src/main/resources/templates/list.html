@@ -14,10 +14,10 @@
     <ul th:if="${!productList.isEmpty()}">
         <li  th:each="p : ${productList}" >
             <span th:text="${p}"></span>
-            <button>
 
-            <a></a>
-            </button>
+
+            <a th:href="@{/detail/{id}(id=${p.getId()})}"><span th:text="${p.getName()}"></span></a>
+
         </li>
     </ul>
     <p th:unless="${!productList.isEmpty()}"></p>
