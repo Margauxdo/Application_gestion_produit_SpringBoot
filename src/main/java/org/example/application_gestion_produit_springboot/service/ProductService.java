@@ -47,11 +47,11 @@ public class ProductService {
         return products.get(id);
     }
 
-    public Product getProductByCategory(String category) {
-        return products.values().stream().filter(p -> p.getCategory().equals(category)).findFirst().orElse(null);
+    public List<Product> getProductByCategoryOrPrice(String category, int price) {
+        return products.values()
+                .stream()
+                .filter(p -> p.getCategory().equals(category) && p.getPrice() <= price)
+                .toList();
     }
-    public Product getProductByPrice(int price){
-        return products.values().stream().filter(p -> p.getPrice() == price).findFirst().orElse(null);
 
-    }
 }
