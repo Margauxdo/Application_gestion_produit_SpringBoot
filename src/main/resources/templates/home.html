@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
     </th:block>
 </head>
-<body class="container">
+<body class="p-3 mb-2 bg-dark text-white card-body text-center">
 
-<h1>Bienvenue </h1>
+<h1 class="card-title text-warning bg-dark">Gestion des produits || Bienvenue </h1>
 
-<nav>
-    <button class="btn btn-outline-danger">
-        <a th:href="@{/list}">Les produits</a>
+<nav class="card-text d-grid gap-2">
+    <button class="p-3 mb-2 bg-warning-subtle text-warning-emphasis rounded">
+        <a th:href="@{/list}" class="text-decoration-none text-primary-emphasis text-uppercase fw-semibold">Les produits</a>
     </button>
 
 

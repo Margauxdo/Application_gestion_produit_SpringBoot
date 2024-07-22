@@ -8,12 +8,15 @@
         <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
     </th:block>
 </head>
-<body>
-<h1>Détail du produit</h1>
+<body class="p-3 mb-2 bg-dark text-white p-3 mb-2 card-body text-center">
+<h1 class= "card-title text-warning bg-dark">Gestion des produits</h1>
+<h2 class="card-title text-warning bg-dark">Détail du produit</h2>
+
 <p>Nom : <span th:text="${product.getName()}"></span></p>
 <p>Categorie : <span th:text="${product.getCategory()}"></span></p>
 <p>Prix : <span th:text="${product.getPrice()}"></span></p>
-<a th:href="@{/list}">Retour à ma liste de produits</a>
+
+<a th:unless="@{/list}">Retour à ma liste de produits</a>
 
 </body>
 </html>
